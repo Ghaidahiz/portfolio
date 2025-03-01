@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,9 @@
 </head>
 <body class="form-container">
     <div>
-    <h1>تم توليد الوصفة بنجاح</h1>
-    <h2 class="title">اسم الوصفة: {{ title }}</h2>
-    <h3>المكونات:</h3>
-    <p class="ingredients">
-        {{ ingredients.replace("\n", "<br>") | safe }} 
-    </p>
-   <h3>طريقة التحضير:</h3>
-    <p class="steps">{{ steps.replace("\n", "<br>") | safe }}    </p>
-</div>
+        <div class="claude-response">
+            {{ html_content | safe }}
+        </div>
+    </div>
 </body>
 </html>

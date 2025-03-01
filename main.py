@@ -7,6 +7,7 @@ import re
 import anthropic
 from pydantic import BaseModel
 from dotenv import load_dotenv
+import markdown
 
 
 load_dotenv('api.env')
@@ -51,26 +52,32 @@ def generate_recipe(ingList: str = Form(...)):
                         {"type": "text", "text": "طريقة التحضير:"}
             ]
         }])
+        full_text = " ".join(block.text for block in message.content)
+        
+        html_content = markdown.markdown(full_text, extensions=['fenced_code', 'tables'])
+        
+        return templates.TemplateResponse("result.html", {
+            "request": recRequest.model_dump(),  
+            "html_content": html_content 
+        })
     except Exception as e:
         raise HTTPException(status_code=550, detail=f"Error generating recipe: {str(e)}")
-    full_text = message.content
-    full_text = " ".join(block.text for block in full_text)
-    print(full_text)
-    # تقسيم النص إلى أقسام
-    sections = re.split(r"اسم الوصفة:|المكونات:|طريقة التحضير:", full_text)
-    if len(sections) < 4:
-        raise ValueError("الاستجابة ليست بالصيغة المتوقعة.")
+    # print(full_text)
+    # # تقسيم النص إلى أقسام
+    # sections = re.split(r"اسم الوصفة:|المكونات:|طريقة التحضير:", full_text)
+    # if len(sections) < 4:
+    #     raise ValueError("الاستجابة ليست بالصيغة المتوقعة.")
 
-    title = sections[1].strip()
-    ingredients = sections[2].strip()
-    steps = sections[3].strip()
+    # title = sections[1].strip()
+    # ingredients = sections[2].strip()
+    # steps = sections[3].strip()
 
-    print("اسم الوصفة:", title)
-    print("المكونات:", ingredients)
-    print("طريقة التحضير:", steps)
+    # print("اسم الوصفة:", title)
+    # print("المكونات:", ingredients)
+    # print("طريقة التحضير:", steps)
 
-    return templates.TemplateResponse("result.html", {
-        "request": recRequest.model_dump(),
-        "title": title,
-        "ingredients": ingredients,
-        "steps": steps})
+    # return templates.TemplateResponse("result.html", {
+    #     "request": recRequest.model_dump(),
+    #     "title": title,
+    #     "ingredients": ingredients,
+    #     "steps": steps})
