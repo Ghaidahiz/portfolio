@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Result</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="form-container">
+    <div>
+    <h1>تم توليد الوصفة بنجاح</h1>
+    <h2 class="title">اسم الوصفة: {{ title }}</h2>
+    <h3>المكونات:</h3>
+    <p class="ingredients">
+        {{ ingredients.replace("\n", "<br>") | safe }} 
+    </p>
+   <h3>طريقة التحضير:</h3>
+    <p class="steps">{{ steps.replace("\n", "<br>") | safe }}    </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
+body {
+    
+    background-color: whitesmoke;
+    font-family: 'vazirmatn';
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    width: 70%;
+    margin: auto;
+    padding:20px;
+    border-radius: 25px;
+    text-align: center;
+    direction: rtl;
+    height: 100%;
+    background: url ("landscape.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images5.alphacoders.com/863/thumb-1920-863405.jpg'); 
+
+
+  }
+
+
+  
+  h2 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  p {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+  }
+
+
+.ingredients {
+    list-style-position: inside;
+    text-align: center;
+
+}
+
+.form-container {
+    background-color: #a9a9a938;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    align-items: center;
+    border-top: 3px solid rgba (255,255,255, 0.4);
+    border-left: 3px solid rgba (255, 255, 255, 0.3);
+    box-shadow: 3px 3px 3px rgba (0,0,0,0.089);
+}
+.textArea {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: large;
+    box-sizing: content-box;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.submit {
+    background-color: #362d5e;
+    color:  white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.submit:hover {
+    background-color: #120c1b;
+}
+

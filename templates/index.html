@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>الطباخ الذكي 🧑🏻‍🍳</title>
+
+
+</head>
+
+<body>
+    <form class="form-container" action="/createrecipe" method="POST">
+        <div>
+            <h2>
+                تبحث عن وصفات لذيذة بمكونات في بيتك؟
+            </h2>
+            <p> </p>
+        
+            <label for="ingList"> ادخل المكونات مفصولة بمسافة: </label>
+            <input type="text" class="textArea" id="ingList" name="ingList" placeholder="دجاج بطاطس زبدة" required>
+        </div>
+
+        <br>
+
+        <div>
+            <input type="submit" class="submit" value="اصنع وصفة!">
+        </div>
+
+
+    </form>
+
+</body>
+
+
+</html>
