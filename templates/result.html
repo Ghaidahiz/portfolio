@@ -16,16 +16,16 @@
                     </svg> 
                 </a>
             </li>
-            <li> <a class="logo" href=" index.html"> Ghaida. </a></li>
+            <li> <a class="logo" href="/"> Ghaida. </a></li>
             <li> <a href="#"> About </a></li>
-            <li> <a href="createRecipe.html"> My Projects </a></li>
+            <li> <a href="/createrecipe"> My Projects </a></li>
             <li> <a href="https://www.github.com/ghaidahiz"> Github :D </a></li>
         </ul>
 
         <ul>
-            <li> <a class="logo" href=" index.html"> Ghaida. </a></li>
+            <li> <a class="logo" href="/"> Ghaida. </a></li>
             <li class="hideOnMobile"> <a href="#"> About </a></li>
-            <li class="hideOnMobile"> <a href="createRecipe.html"> My Projects </a></li>
+            <li class="hideOnMobile"> <a href="/createrecipe"> My Projects </a></li>
             <li class="hideOnMobile"> <a href="https://www.github.com/ghaidahiz"> Github :D </a></li>
             <li class="hideOnPc" onclick="showSidebar()">
                 <a href="#">
@@ -42,5 +42,15 @@
             {{ html_content | safe }}
         </div>
     </div>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display='flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display='none'
+        }
+    </script>
 </body>
 </html>

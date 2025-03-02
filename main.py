@@ -22,9 +22,12 @@ class RecipeRequest(BaseModel):
     
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+@app.get("/createrecipe", response_class=HTMLResponse)
+def home(request: Request):
     return templates.TemplateResponse("createRecipe.html", {"request": request})
 
-@app.post("/createrecipe")
+@app.post("/reciperesult")
 def generate_recipe(ingList: str = Form(...)):
     try:
         recRequest = RecipeRequest(ingredients=ingList)
