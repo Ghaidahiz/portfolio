@@ -1,9 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
 
-body {
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+ .home {
+        /* background-color: rgb(19, 14, 37); */
+        background-image: url("girl.gif"); 
+        background-size: cover;  
+        background-position: center; 
+        background-repeat: no-repeat; 
+        height: 100vh; 
+        margin: 0;
+        padding: 0;
+        font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        flex-direction: column;
+        color: rgb(243, 233, 252);
+        }
+        .chefHome {
+            /* background-color: rgb(19, 14, 37); */
+            background-image: url("kitchen.png"); 
+            background-size: cover;  
+            background-position: center; 
+            background-repeat: no-repeat; 
+            height: 100vh; 
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn';
+            direction: rtl;
+            display: flex;
+            flex-direction: column;
+            color: rgb(243, 233, 252);
+            }
+        
+    .Ghaida{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding:0 10%;
+    }
+    .Ghaida-content{
+        max-width: 600px;
+    }
+    .Ghaida-content h1{
+        font-size: 40px;
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        color: white;
+    }
+    .Ghaida-content .me{
+        color:#b175ff;
+    }
+
+    .Ghaida-content h3{
+        font-size: 25px;
+        font-weight: 600;
+        color: #abb9ff;
+        padding: 0;
+        margin: 0;
+    }
+    .Ghaida-content p{
+        font-size: 16px;
+        padding: 0;
+        margin:10px 0 30px;
+        padding-top: 10px;
+
+    }
+    .Ghaida-content .btn-box{
+    display: flex;
+    align-items: start;
+    width:345px;
+    height:50px;
+    }
+    .btn-box a {
+        position: relative;
+        display: inline-flex;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        justify-content: space-evenly;
+        width: 150px;
+        height:100%;
+        background:#b175ff;
+        border: 2px solid #b175ff;
+        border-radius:20px;
+        font-size: 19px;;
+        color:#201535;
+        text-decoration:none;
+        text-align: center;
+        font-weight: 600;
+        z-index: 1;
+
+    }
+    .btn-box a:hover{
+        color:#b175ff;
+    }
+    .btn-box a::before{
+        border-radius:20px;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        
+        background: #201535;
+        z-index: -1;
+        transition: .3s;
+        overflow: hidden;
+    }
+    .btn-box a:hover::before{
+        width: 100%;
+    }
+
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    direction: ltr;  
+    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    background-color: #34264a4a;
+    /* backdrop-filter: blur(10px); */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+
+}
+nav li{
+    height: 50px;
+    
+}
+.logo{
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+}
+nav a{
+    height:100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #c0adda;
+}
+
+
+nav a:not(.logo):hover {
+    background-color: rgba(212, 154, 250, 0.333);
+    height: 100%;
+    color: rgb(19, 14, 37);;
+
+}
+nav li:first-child{
+    margin-right:auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width:250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background-color: #3d2d5968;
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+
+
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+    color: #c0adda;
+}
+.recipe-maker {
     background-color: whitesmoke;
     font-family: 'Vazirmatn';
-    background: url ("landscape.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -11,15 +201,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     margin: 0;
     padding: 20px;
     background-image: url('https://images5.alphacoders.com/863/thumb-1920-863405.jpg');
     direction: rtl;
 }
+.recipe-result {
+    background-color: whitesmoke;
+    font-family: 'Vazirmatn';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    margin: 0;
+    padding: 20px;
+    background-image: url('kitchen.png');
+    direction: rtl;
+}
+
 
 .form-container {
-    background-color: #a9a9a938;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-family: 'Vazirmatn';
+    background-color: #43335e52;
     padding: 20px;
     backdrop-filter: blur(8px);
     border-radius: 25px;
@@ -32,6 +245,7 @@ body {
 }
 
 .textArea {
+    font-family: 'Vazirmatn';
     background-color: #f9f9f9bf;
     padding: 25px;
     border-radius: 10px;
@@ -40,12 +254,14 @@ body {
 }
 
 label {
+    font-family: 'Vazirmatn';
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
 textarea {
+    font-family: 'Vazirmatn';
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -55,6 +271,7 @@ textarea {
 }
 
 .submit {
+    font-family: 'Vazirmatn';
     background-color: #362d5e;
     color: white;
     border: none;
@@ -66,4 +283,75 @@ textarea {
 
 .submit:hover {
     background-color: #120c1b;
+}
+.results-container {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    margin: 80px auto;
+    max-width: 800px;
+    height: auto;
+    min-height: 70vh;
+    overflow-y: auto;
+    background-color: #43335e52;
+    backdrop-filter: blur(8px);
+    border-radius: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+.claude-response {
+    padding: 15px 0;
+    text-align: center;
+    direction: rtl;
+    color: #ddd;
+}
+
+  .claude-response h1 {
+    color: #bdafff;
+    font-size: 32px;
+  }
+  
+  .claude-response h2 {
+    color: #c0adda;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .claude-response ul, .claude-response ol {
+    padding-right: 20px;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .claude-response li {
+    margin-bottom: 8px;
+  }
+  
+  .claude-response p {
+    margin-bottom: 15px;
+  }
+  
+  .claude-response strong {
+    color: #e74c3c;
+  }
+
+  @media(min-width:800px){
+    .hideOnPc{
+        display:none;
+    }
+}
+@media(max-width:800px){
+    .hideOnMobile{
+        display:none;
+    }
+}
+@media(max-width:400px){
+    .sidebar{
+        width:100%;
+    }
 }

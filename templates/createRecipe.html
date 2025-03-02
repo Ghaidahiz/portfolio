@@ -10,7 +10,7 @@
 
 </head>
 
-<body class="home" >
+<body class="chefHome" >
     <nav>
         <ul class="sidebar">
             <li onclick=hideSidebar()> <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#c0adda"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg> </a></li>
@@ -33,14 +33,30 @@
     </nav>
     <section class="Ghaida">
         <div class="Ghaida-content">
-            <h1> Hello! I'm</h1> <h1></h1>
-             <h1 class="me"> Ghaida Alzaidan</h1>
-            <h3> Aspiring Developer </h3>
-                <p>I'm someone who loves building cool things with code. Whether it's making websites, playing around with new tech, or figuring out creative solutions, I'm always up for a challenge. I also have a thing for new experiences, fun projects, and learning something new every day. Welcome to my little space on the internet!</p>
+            <h1> تبحث عن وصفات لذيذة بمكونات
+            </h1> <h1></h1>
+             <h1 class="me"> في بيتك؟ </h1>
+            <h3> جرّب الطباخ الذكي! </h3>
+                <p></p>
                 <div class="btn-box">
-                    <a href="createRecipe.html">My projects</a>
+                    <a onclick=showForm() href="#">الطباخ الذكي</a>
                 </div>
-            </div>
+            </div> 
+            <form class="form-container" action="/createrecipe" method="POST">
+                <div>
+                    <p> </p>
+                    <label for="ingList"> ادخل المكونات مفصولة بمسافة: </label>
+                    <input type="text" class="textArea" id="ingList" name="ingList" placeholder="دجاج بطاطس زبدة" required>
+                </div>
+        
+                <br>
+        
+                <div>
+                    <input type="submit" class="submit" value="اصنع وصفة!">
+                </div>
+        
+            </form>
+        
     
     </section>
     <br>
@@ -55,6 +71,17 @@
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display='none'
         }
+        function showForm() {
+            const form = document.querySelector(".form-container")
+            form.style.display='block'
+            hideContent()
+            }
+            function hideContent() {
+            const form = document.querySelector(".Ghaida-content")
+            form.style.display='none'
+            }
+        
+
     </script>
 </body>
 
