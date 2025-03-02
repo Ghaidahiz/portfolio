@@ -337,7 +337,8 @@ textarea {
   }
   
   .claude-response strong {
-    color: #e74c3c;
+    color: #bf4dbf;
+    font-weight: 600;
   }
 
   @media(min-width:800px){
