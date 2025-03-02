@@ -350,6 +350,12 @@ textarea {
     .hideOnMobile{
         display:none;
     }
+    .home {
+        background-position: 80% center; }
+    
+        .chefHome {
+            background-position: 55% center; }
+    
 }
 @media(max-width:400px){
     .sidebar{
